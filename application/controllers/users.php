@@ -7,7 +7,7 @@ class Users extends CI_Controller
 		unset($_SESSION['fb_' . $fb_app_id . '_user_id']);
 		unset($_SESSION['fb_' . $fb_app_id . '_code']);
 		unset($_SESSION['fb_' . $fb_app_id . '_state']);
-        $this->session->sess_destroy();
-        redirect(base_url());
+		$this->session->sess_destroy();
+		redirect(base_url());
 	}
 }
