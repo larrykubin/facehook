@@ -1,8 +1,12 @@
+Facehook - CodeIgniter Hooks For Facebook
+=========================================
+
 Facehook is a set of hooks for CodeIgniter that makes it easy to require facebook login to access a controller function. It was developed against CodeIgniter 2 and the Facebook PHP SDK 3.0.
 
 Set up your config in application/config/config.php
 
 edit settings for your app
+--------------------------
 
 Get a copy of the facebook php sdk and put it in libraries, or use the one in this package
 Create a route that maps to your logout controller. A sample logout controller is included here.
@@ -13,9 +17,11 @@ http://developers.facebook.com/docs/reference/api/permissions/
 
 * Sample Configuration *
 
+```php
 $config['fb_app_id'] = 'abcdefgh';
 $config['fb_secret'] = '12345678';
 $config['fb_scope']  = 'email,user_birthday,user_photo_video_tags';
 $config['fb_login_url_tag']  = '{fb_login_url}';
 $config['fb_logout_url_tag'] = '{fb_logout_url}';
 $config['fb_logout_action']  = 'users/logout';
+```
