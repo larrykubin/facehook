@@ -1,7 +1,8 @@
 Facehook - CodeIgniter Hooks For Facebook
 =========================================
 Author: Larry Kubin
-Comments/Questions?: Send email to larry.kubin@gmail.com
+
+Comments/Questions/Complaints: Send email to larry.kubin@gmail.com
 
 Facehook is a set of hooks for CodeIgniter 2 that makes it easy to do the following:
 
