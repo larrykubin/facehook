@@ -112,6 +112,7 @@ function handle_profile($profile)
 
 What we have shown above is all good for allowing the user to log in and out. But we probably want the ability to prohibit a user from accessing a URL unless they are already authenticated. To do this, define a variable in your class called $require_fb and set its value to an array of methods that you want locked down. If users hit any of these URL's, Facehook will know that it needs to direct them to the Facebook login URL first. Once they are logged in to Facebook, it will automatically redirect them to the URL they were trying to access. 
 
+``` php
 <?php
 class Welcome extends CI_Controller {
 	public $require_fb = array('secret');
@@ -127,3 +128,4 @@ class Welcome extends CI_Controller {
 	}
 }
 ?>
+```
