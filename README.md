@@ -1,5 +1,7 @@
 Facehook - CodeIgniter Hooks For Facebook
 =========================================
+Author: Larry Kubin
+Comments/Questions?: Send email to larry.kubin@gmail.com
 
 Facehook is a set of hooks for CodeIgniter 2 that makes it easy to do the following:
 
@@ -31,7 +33,7 @@ $config['enable_hooks'] = true;
 ```
 Also, make sure you are loading the URL helper and session library. You are probably doing this in your config/autoload.php. There is also a facebook_helper included that you can use if desired. It is just a simple function to check if the user is logged in with facebook and gets their user ID. It can be useful in your view scripts.
 
-```
+``` php
 <?php
 $autoload['helper'] = array('url', 'facebook');
 $autoload['libraries'] = array('session');
