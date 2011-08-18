@@ -21,12 +21,20 @@ Configuration
 First, make sure hooks are enabled in your config/config.php file so that CodeIgniter can use hooks.
 
 ``` php
+<?php
 $config['enable_hooks'] = TRUE;
+```
+Also, make sure you are loading the URL helper. You probably already have it in your config/autoload.php, but just in case:
+
+```
+<?php
+$autoload['helper'] = array('url');
 ```
 
 Now that hooks are enabled, the Facebook hook needs to be loaded. Copy/paste the following into your config/hooks.php or just use the hooks.php in this repository if you aren't using any other hooks already.
 
 ``` php
+<?php
 $hook['post_controller_constructor'] = array(
 	'class'    => 'Facehook',
 	'function' => 'check_login',
@@ -49,6 +57,7 @@ Then, you will need to add some configuration settings for your Facebook applica
 *Sample Configuration*
 
 ``` php
+<?php
 $config['fb_app_id'] = 'abcdefgh';
 $config['fb_secret'] = '12345678';
 $config['fb_scope']  = 'email,user_birthday,user_photo_video_tags';

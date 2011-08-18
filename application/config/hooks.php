@@ -10,7 +10,21 @@
 |
 */
 
+$hook['post_controller_constructor'] = array(
+	'class'    => 'Facehook',
+	'function' => 'check_login',
+	'filename' => 'Facehook.php',
+	'filepath' => 'hooks',
+	'params'   => ''
+);
 
+$hook['display_override'] = array(
+	'class'    => 'Facehook',
+	'function' => 'inject_urls',
+	'filename' => 'Facehook.php',
+	'filepath' => 'hooks',
+	'params'   => ''
+);
 
 /* End of file hooks.php */
 /* Location: ./application/config/hooks.php */
