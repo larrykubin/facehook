@@ -29,11 +29,11 @@ $config['base_url']	= 'http://facehook.dev/';
 $config['enable_hooks'] = true;
 ?>
 ```
-Also, make sure you are loading the URL helper and session library. You are probably doing this in your config/autoload.php, but just in case:
+Also, make sure you are loading the URL helper and session library. You are probably doing this in your config/autoload.php. There is also a facebook_helper included that you can use if desired. It is just a simple function to check if the user is logged in with facebook and gets their user ID. It can be useful in your view scripts.
 
 ```
 <?php
-$autoload['helper'] = array('url');
+$autoload['helper'] = array('url', 'facebook');
 $autoload['libraries'] = array('session');
 ?>
 ```
@@ -128,4 +128,24 @@ class Welcome extends CI_Controller {
 	}
 }
 ?>
+```
+
+*Putting Login and Logout Links Your View*
+
+In your config file, you already set up some "tags" where the Facebook login URLs will go. So put these in your view anywhere you need a link to log in or log out. These tags are used because I wanted to have the URLs automatically be available to any view, and I decided to use the CodeIgniter display_override hook to accomplish this.
+
+``` php
+<? if( get_facebook_user_id() ) { ?>
+<p>
+You can display the logout url when they are logged in.
+
+<a href="{fb_logout_url}">Log Out</a>
+</p>
+<? } else { ?>
+<p>
+You can display the login url if the user is not logged in.
+
+<a href="{fb_login_url}">Log In</a>
+</p>
+<? } ?>
 ```
