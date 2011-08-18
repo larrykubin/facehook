@@ -1,15 +1,21 @@
 Facehook - CodeIgniter Hooks For Facebook
 =========================================
 
-Facehook is a set of hooks for CodeIgniter that makes it easy to require facebook login to access a controller function. It was developed against CodeIgniter 2 and the Facebook PHP SDK 3.0.
+Facehook is a set of hooks for CodeIgniter that makes it easy to require facebook login to access a controller function. It was developed against CodeIgniter 2 and the Facebook PHP SDK 3.0. It was developed for my first Facebook application and this was my first use of CodeIgniter, so I welcome suggestions on how to improve it.
 
-Set up your config in application/config/config.php
 
-Dependencies
-------------
+Get Dependencies
+----------------
 
-Get a copy of the facebook php sdk and put it in libraries, or use the one in this package
-Create a route that maps to your logout controller. A sample logout controller is included here.
+CodeIgniter 2
+http://www.codeigniter.com
+
+You will obviously be using CodeIgniter since that is what these hooks are for. 
+
+Facebook PHP SDK 3.0+
+https://github.com/facebook/php-sdk
+
+Once you have a CodeIgniter directory structure set up, clone the Facebook PHP SDK and put it in application/libraries, or use the one in this project if you don't need the latest and greatest.
 
 Most of the settings are self explanatory. The app ID and secret are provided by facebook when you create a new facebook application. The fb_scope is a list of permissions that you want to ask the user for when they log in with facebook. A complete list of Facebook Graph API permissions can be found at the URL below:
 
